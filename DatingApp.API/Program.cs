@@ -19,9 +19,6 @@ namespace DatingApp.API
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
             WebHost.CreateDefaultBuilder(args)
-            .ConfigureAppConfiguration((context, builder) => builder.SetBasePath(context.HostingEnvironment.ContentRootPath)
-                       .AddJsonFile("appsettings.json")
-                       .Build())
             .UseStartup<Startup>();
     }
 }
